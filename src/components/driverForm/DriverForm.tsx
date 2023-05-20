@@ -15,8 +15,7 @@ const DriverForm = () => {
 
   const phoneNumber = countryCode + phone;
 
-  const handleChangeBox
-   = () => {
+  const handleChangeBox = () => {
     setIsChecked(!isChecked);
   };
 
@@ -32,7 +31,7 @@ const DriverForm = () => {
 
   const isEmailValid = isTouched && !validateEmail(email);
   const isCheckboxValid = !isChecked && isTouched;
-  const isPhoneValid = isTouched && phoneNumber.trim() === '';
+  const isPhoneValid = isTouched && phoneNumber.trim() === "";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -91,7 +90,7 @@ const DriverForm = () => {
               style={{ height: "50px" }}
               id="countryCode"
               // className=" form-select col-4"
-              className={`form-control ${isPhoneValid ? 'is-invalid' : ''}`}
+              className={`form-control ${isPhoneValid ? "is-invalid" : ""}`}
               onChange={(e) => setCountryCode(e.target.value)}
               value={countryCode}
             >
@@ -107,15 +106,13 @@ const DriverForm = () => {
               type="text"
               id="phoneNumber"
               // className="form-control col-8"
-              className={`form-control ${isPhoneValid ? 'is-invalid' : ''}`}
+              className={`form-control ${isPhoneValid ? "is-invalid" : ""}`}
               placeholder="Phone"
             />
           </div>
-         
-            <div className="invalid-feedback">
-              Please enter a phone number.
-            </div>
-         
+          {isTouched && isPhoneValid && (
+            <div className="invalid-feedback">Please enter a phone number.</div>
+          )}
         </div>
 
         <div className="form-group row justify-content-center col-md-12 ">
@@ -163,7 +160,7 @@ const DriverForm = () => {
           >
             SIGN UP AS A DRIVER
           </button> */}
-          <MyButton 
+          <MyButton
             style={{ height: "50px" }}
             className="btn btn-success btn  d-lg-block button-color w-5 border-0 rounded-5 "
             title="SIGN UP AS A DRIVER"
