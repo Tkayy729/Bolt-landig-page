@@ -1,0 +1,12 @@
+
+.button-color{
+    background-color: var(--custom-button-color);
+}
+
+[nav-item]{
+    background-color: var(--custom-link-color);
+}
+
+.bc{
+    background-color: white
+}

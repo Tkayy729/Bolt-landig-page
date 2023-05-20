@@ -1,0 +1,8 @@
+.button-color{
+    background-color: var(--custom-button-color);
+}
+
+
+.t-color{
+    color: var(--custom-button-color);
+}
